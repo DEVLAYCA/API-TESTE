@@ -12,10 +12,11 @@ module.exports = {
                 descricao: carros[i].modelo
             });
         }
+
         res.json(json);
     },
 
-    buscarUm: async(req, res) => {
+    buscarUm: async (req, res) => {
         let json = {error:'', result:{}};
 
         let codigo = req.params.codigo;
@@ -55,7 +56,7 @@ module.exports = {
         let modelo = req.body.modelo;
         let placa = req.body.placa;    
 
-        if(codigo && modelo && placa){
+        if (codigo && modelo && placa){
             await CarroService.alterar(codigo, modelo, placa);
             json.result = {
                 codigo,
@@ -73,5 +74,5 @@ module.exports = {
         await CarroService.excluir(req.params.codigo);
 
         res.json(json);
-    }
+    },
 }

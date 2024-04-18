@@ -1,9 +1,17 @@
 
-## Description
+# Description
 
 Criei um CRUD para o Teste Acanto (create, read, update, delete) dentro do banco de dados MySql, para o cadastramento de carros, nesse CRUD eu cadastrei o id, o modelo e a placa de cada veículo.
 
-Aqui está uma ideia do modelo da tabela desenvolvida  👇.
+## Organização  das pastas
+
+Realizei as configurações iniciais instalando as depedências do projeto. Após isso, inseri uma pasta denominada **"src"**  na raiz do projeto, dentro dessa pasta foi criado uma subpasta para o servidor, denominada **"services"**. Dentro da pasta **"src"** criei um arquivo denominado **"routes"** para o armazenamento de todas as rotas utilizadas. Para controlar as rotas eu utilizei o framework express.
+
+Na raiz do projeto **"API"**, criei um arquivo de configuração de variável de ambiente, denominada **".env"**, para deixar a API mais organizada (apesar de ser uma prática não recomendada, deixei apenas para fins didáticos).
+
+Novamente, dentro da pasta **"src"**, criei duas subpastas **"controllers"** e **"services"**.  Dentro da pasta **"controllers"** foi criado um arquivo javascript **"CarroController.js"** e na pasta services criei um arquivo **"CarroService.js"**. O arquivo **"CarroController"** foi utilizado para controlar as rotas da API, descrevendo os comandos de cada rota solicitada, o arquivo **"CarroService"** é responsável por executar a lógica com o banco de dados MySql.
+
+
 
 ## Installation
 
@@ -34,18 +42,18 @@ $ npm start
 
 ```bash
 # GET http://localhost:3333/carros (to get carros list)
- "result":[
+ Result:[
     {"descricao":"Fiat Uno"},
     {"descricao":"Volkswagen Gol"},
     {"descricao":"Chevrolet Onix"}
-    ]
+]
 ```
 
 ```bash
 # GET http://localhost:3333/carro/1 (to get car details)
-"result":{
+Result:{
     "id":1,"modelo":"Fiat Uno","placa":"ABC1234"
-    }
+}
 ```
 
 ```bash
@@ -54,7 +62,7 @@ body:{
     "modelo": "Fusca",
     "placa": "RPJ5B48"
 }
-Response: 200 OK:{
+Result:{
     "modelo":"Fusca ","placa":"RPJ5B48"
 }
 ```
@@ -65,15 +73,15 @@ body:{
     "modelo": "Fusca 1999",
     "placa": "ADV4567"
 }
-Response: 200 OK:{
+Result:{
     "codigo":"2","modelo":"Fusca 1999","placa":"ADV4567"
-    }
+}
 ```
 
 ```bash
 # DELETE http://localhost:3333/carro/1 (to delete car)
  no body required*
-Response: 200 OK: { }
+Result: { }
 ```
 
 ```bash
@@ -83,9 +91,4 @@ Response: 200 OK: { }
 
 ## Stay in touch
 
-- Author - [Layrane Leão](https://www.linkedin.com/in/layrane-le%C3%A3o-451946278/)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-dev
+- Author - <a href="https://www.linkedin.com/in/layrane-le%C3%A3o-451946278/" target="_blank">Layrane Leão</a>

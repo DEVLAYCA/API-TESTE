@@ -91,4 +91,4 @@ Result: { }
 
 ## Stay in touch
 
-- Author - <a href="https://www.linkedin.com/in/layrane-le%C3%A3o-451946278/" target="_blank">Layrane Leão</a>
+- Author - <a target="_blank" href="https://www.linkedin.com/in/layrane-le%C3%A3o-451946278/" >Layrane Leão</a>
